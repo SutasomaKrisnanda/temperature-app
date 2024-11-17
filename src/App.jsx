@@ -34,13 +34,6 @@ function App() {
           </select>
           <button className='ml-2 rounded-lg p-3 border-0 bg-inherit' type="submit" disabled={!value || !frUnit || !toUnit} onClick={() => {
             setResultString(`${value} ${frUnit} is ${convert(value, frUnit, toUnit)} ${toUnit}`);
-            console.log({
-              value,
-              frUnit,
-              toUnit,
-              result,
-              resultString
-            })
           }}>Convert</button>
         </form>
         <div className="mt-5 text-green-500 text-xl" hidden={!resultString}>{resultString}</div>
